@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+  <h5>Please esure to enter the correct details in the below form</h5>
+  <form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.schoolname.label }} {{ form.schoolname }}
+    {{ form.coachname.label }} {{ form.coachname }}
+    {{ form.registrationfee.label }} {{ form.registrationfee}}
+    {{ form.submit() }}
+
+  </form>
+
+  <p>Please ensure to enter the correct name of the team members in the school team. Use the form below:</p>
+  <form method="POST">                                                    ``
+    {{ form.hidden_tag() }}
+    {{ form.member.label }} {{ form.member}}
+    {{ form.sch_id.label }} {{ form.sch_id }}
+    {{ form.submit}}
+
+  </form>
+
+</div>
+
+{% endblock %}
